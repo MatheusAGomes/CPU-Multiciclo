@@ -1,0 +1,12 @@
+ENTITY FullAdder IS
+    PORT (
+       cin,x,y: IN STD_LOGIC_VECTOR;
+        S,cout : OUT STD_LOGIC_VECTOR
+    );
+END ENTITY;
+
+ARCHITECTURE FullAdder_arch OF FullAdder IS
+BEGIN
+		S <= (cin XOR (x XOR y));
+		cout <= ((x AND y) OR (cin AND X) OR (cin AND y));
+END ARCHITECTURE;

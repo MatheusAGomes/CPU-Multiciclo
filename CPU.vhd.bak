@@ -1,0 +1,19 @@
+LIBRARY work;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity PC is port 
+	(
+		
+	Proxima_instucao: in std_logic_vector(7 downto 0);
+	instucao: OUT std_logic_vector(7 downto 0)
+	);
+	
+end entity;
+ARCHITECTURE PC_arch OF PC IS
+BEGIN
+		S <= (cin XOR (x XOR y));
+		cout <= ((x AND y) OR (cin AND X) OR (cin AND y));
+END ARCHITECTURE;

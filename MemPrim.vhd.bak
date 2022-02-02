@@ -1,0 +1,25 @@
+LIBRARY work;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity MemPrim is port 
+	(
+		
+
+	);
+	
+end entity;
+	
+architecture MemPrim_arch of MemPrim is 
+Begin
+Process(Resetn,Clock)
+	begin
+		if Resetn = '1' then 
+		Q <= "00000000";
+		elsif Clock'Event and Clock = '1' and Load ='1' then
+		Q <= D;
+		end if;
+	end Process;
+end architecture;
